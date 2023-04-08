@@ -17,6 +17,7 @@ Int32.TryParse(WorkerAge, out WorkerAgeNumber);
 Console.WriteLine("Podaj płeć pracownika w formię: \r\n M = Mężczyzna \r\n K = Kobieta");
 string WorkerSex = Console.ReadLine();
 
+
 Console.WriteLine("Podaj numer PESEL pracownika...");
 string WorkerPesel = Console.ReadLine();
 
@@ -29,6 +30,7 @@ string WorkerID = Console.ReadLine();
 int WorkerIDNumber = 0;
 Int32.TryParse(WorkerID, out WorkerIDNumber);
 
+Console.WriteLine("");
 Console.WriteLine("Dziękuję za podanie danych, oto podsumowanie");
 Console.WriteLine("Imię:" + WorkerName);
 Console.WriteLine("Nazwisko:" + WorkerSurname);
