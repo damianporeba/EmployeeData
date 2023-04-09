@@ -1,36 +1,48 @@
-﻿Console.WriteLine("Witaj w programie rejestracji pracownika!");
-Console.WriteLine("Zostaniesz poproszony o podanie podstawowych danych o pracowniku...");
-Console.WriteLine("Wpisz imię pracownika...");
+﻿using System;
 
-string WorkerName = Console.ReadLine();
+namespace addressbook
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
 
-Console.WriteLine("Wpisz nazwisko pracownika...");
-string WorkerSurname = Console.ReadLine();
+            Console.WriteLine("Witaj w programie rejestracji pracownika!");
+            Console.WriteLine("Zostaniesz poproszony o podanie podstawowych danych o pracowniku...");
+            Console.WriteLine("Wpisz imię pracownika...");
 
-Console.WriteLine("Podaj wiek pracownika w latach...");
-string WorkerAge = Console.ReadLine();
+            string workerName = Console.ReadLine();
 
-int WorkerAgeNumber = 0;
+            Console.WriteLine("Wpisz nazwisko pracownika...");
+            string workerSurname = Console.ReadLine();
 
-Int32.TryParse(WorkerAge, out WorkerAgeNumber);
+            Console.WriteLine("Podaj wiek pracownika w latach...");
+            string workerAge = Console.ReadLine();
 
-Console.WriteLine("Podaj płeć pracownika w formię: \r\n M = Mężczyzna \r\n K = Kobieta");
-string WorkerSex = Console.ReadLine();
+            int workerAgeNumber = 0;
 
+            Int32.TryParse(workerAge, out workerAgeNumber);
 
-Console.WriteLine("Podaj numer PESEL pracownika...");
-string WorkerPesel = Console.ReadLine();
-
-Console.WriteLine("Podaj numer pracownika przypisany do legitymacji (5 cyfr) ...");
-string WorkerID = Console.ReadLine();
+            Console.WriteLine("Podaj płeć pracownika w formię: \r\n M = Mężczyzna \r\n K = Kobieta");
+            string workerSex = Console.ReadLine();
 
 
-Console.WriteLine("");
-Console.WriteLine("Dziękuję za podanie danych, oto podsumowanie");
-Console.WriteLine("Imię:" + WorkerName);
-Console.WriteLine("Nazwisko:" + WorkerSurname);
-Console.WriteLine("Wiek:" + WorkerAgeNumber);
-Console.WriteLine("Płeć:" + WorkerSex);
-Console.WriteLine("PESEL:" + WorkerPesel);
-Console.WriteLine("Numer pracownika:" + WorkerID);
+            Console.WriteLine("Podaj numer PESEL pracownika...");
+            string workerPesel = Console.ReadLine();
 
+            Console.WriteLine("Podaj numer pracownika przypisany do legitymacji (5 cyfr) ...");
+            string workerID = Console.ReadLine();
+
+
+            Console.WriteLine("");
+            Console.WriteLine("Dziękuję za podanie danych, oto podsumowanie");
+            Console.WriteLine("Imię:" + workerName);
+            Console.WriteLine("Nazwisko:" + workerSurname);
+            Console.WriteLine("Wiek:" + workerAgeNumber);
+            Console.WriteLine("Płeć:" + workerSex);
+            Console.WriteLine("PESEL:" + workerPesel);
+            Console.WriteLine("Numer pracownika:" + workerID);
+
+        }
+    }
+}
