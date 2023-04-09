@@ -21,14 +21,9 @@ string WorkerSex = Console.ReadLine();
 Console.WriteLine("Podaj numer PESEL pracownika...");
 string WorkerPesel = Console.ReadLine();
 
-Int64 WorkerPeselNumber = 0;
-Int64.TryParse (WorkerPesel, out WorkerPeselNumber);
-
 Console.WriteLine("Podaj numer pracownika przypisany do legitymacji (5 cyfr) ...");
 string WorkerID = Console.ReadLine();
 
-int WorkerIDNumber = 0;
-Int32.TryParse(WorkerID, out WorkerIDNumber);
 
 Console.WriteLine("");
 Console.WriteLine("Dziękuję za podanie danych, oto podsumowanie");
@@ -36,6 +31,6 @@ Console.WriteLine("Imię:" + WorkerName);
 Console.WriteLine("Nazwisko:" + WorkerSurname);
 Console.WriteLine("Wiek:" + WorkerAgeNumber);
 Console.WriteLine("Płeć:" + WorkerSex);
-Console.WriteLine("PESEL:" + WorkerPeselNumber);
-Console.WriteLine("Numer pracownika:" + WorkerIDNumber);
+Console.WriteLine("PESEL:" + WorkerPesel);
+Console.WriteLine("Numer pracownika:" + WorkerID);
 
