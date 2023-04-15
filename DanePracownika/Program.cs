@@ -26,7 +26,17 @@ namespace addressbook
             Console.WriteLine("Podaj płeć pracownika w formię: \r\n M = Mężczyzna \r\n K = Kobieta");
             string workerSex = Console.ReadLine();
 
+            if (workerSex.Length > 1)
+            {
+                Console.WriteLine("Podaj 1 literę");
+                workerSex = Console.ReadLine();
 
+                while (workerSex.Length > 1)
+                {
+                    Console.WriteLine("Podaj 1 literę");
+                    workerSex = Console.ReadLine();
+                }
+            }
             Console.WriteLine("Podaj numer PESEL pracownika...");
             string workerPesel = Console.ReadLine();
 
