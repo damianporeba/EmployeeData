@@ -27,12 +27,7 @@ namespace addressbook
             Console.WriteLine("Podaj płeć pracownika w formie: \r\n M = Mężczyzna \r\n K = Kobieta");
             string workerSex = Console.ReadLine();
 
-            while (workerSex.Length > 1)
-                {
-                    Console.WriteLine("Podaj 1 literę");
-                    workerSex = Console.ReadLine();
-                }
-
+ 
             while (workerSex != "M" && workerSex != "K")
             {
                 Console.WriteLine("Wprowadź prawidłową płec");
