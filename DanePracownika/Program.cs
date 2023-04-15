@@ -33,27 +33,29 @@ namespace addressbook
                     workerSex = Console.ReadLine();
                 }
 
-            if (workerSex == "K")
+            while (workerSex != "M" && workerSex != "K")
             {
-
+                Console.WriteLine("Wprowadź prawidłową płec");
+                workerSex = Console.ReadLine();
             }
 
-            else if (workerSex == "K")
-            {
-
-            }
-            else
-            {
-                Console.WriteLine("Podaj prawidłową literę oznaczającą płeć");
-                workerSex = Console.ReadLine() ;    
-            }
-      
             Console.WriteLine("Podaj numer PESEL pracownika...");
             string workerPesel = Console.ReadLine();
 
             Console.WriteLine("Podaj numer pracownika przypisany do legitymacji (5 cyfr) ...");
             string workerID = Console.ReadLine();
 
+            while (workerID.Length < 5)
+            {
+                Console.WriteLine("Podaj prawidłowy numer ID (5 cyfrowy)");
+                workerID = Console.ReadLine();
+
+                while (workerID.Length > 5)
+                {
+                    Console.WriteLine("Podaj prawidłowy numer ID(5 cyfrowy)");
+                    workerID = Console.ReadLine();
+                }
+            }
 
             Console.WriteLine("");
             Console.WriteLine("Dziękuję za podanie danych, oto podsumowanie");
