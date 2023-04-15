@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 
 namespace addressbook
 {
@@ -23,20 +24,30 @@ namespace addressbook
 
             Int32.TryParse(workerAge, out workerAgeNumber);
 
-            Console.WriteLine("Podaj płeć pracownika w formię: \r\n M = Mężczyzna \r\n K = Kobieta");
+            Console.WriteLine("Podaj płeć pracownika w formie: \r\n M = Mężczyzna \r\n K = Kobieta");
             string workerSex = Console.ReadLine();
 
-            if (workerSex.Length > 1)
-            {
-                Console.WriteLine("Podaj 1 literę");
-                workerSex = Console.ReadLine();
-
-                while (workerSex.Length > 1)
+            while (workerSex.Length > 1)
                 {
                     Console.WriteLine("Podaj 1 literę");
                     workerSex = Console.ReadLine();
                 }
+
+            if (workerSex == "K")
+            {
+
             }
+
+            else if (workerSex == "K")
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Podaj prawidłową literę oznaczającą płeć");
+                workerSex = Console.ReadLine() ;    
+            }
+      
             Console.WriteLine("Podaj numer PESEL pracownika...");
             string workerPesel = Console.ReadLine();
 
